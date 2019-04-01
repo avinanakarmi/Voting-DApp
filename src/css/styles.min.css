@@ -1,0 +1,67 @@
+.login-clean {
+  background: #f1f7fc!important;
+  padding: 80px 0!important;
+}
+
+.login-clean form {
+  max-width: 320px!important;
+  width: 90%!important;
+  margin: 0 auto!important;
+  background-color: #ffffff!important;
+  padding: 40px!important;
+  border-radius: 4px!important;
+  color: #505e6c!important;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1)!important;
+}
+
+.login-clean .illustration {
+  text-align: center!important;
+  padding: 0 0 20px!important;
+  font-size: 100px!important;
+  color: rgb(244,71,107)!important;
+}
+
+.login-clean form .form-control {
+  background: #f7f9fc!important;
+  border: none!important;
+  border-bottom: 1px solid #dfe7f1!important;
+  border-radius: 0!important;
+  box-shadow: none!important;
+  outline: none!important;
+  color: inherit!important;
+  text-indent: 8px!important;
+  height: 42px!important;
+}
+
+.login-clean form .btn-primary {
+  background: #7f96c2!important;
+  border: none!important;
+  border-radius: 4px!important;
+  padding: 11px!important;
+  box-shadow: none!important;
+  margin-top: 26px!important;
+  text-shadow: none!important;
+  outline: none !important;
+}
+
+.login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
+  background: #7f96c2!important;
+}
+
+.login-clean form .btn-primary:active {
+  transform: translateY(1px)!important;
+}
+
+.login-clean form .forgot {
+  display: block!important;
+  text-align: center!important;
+  font-size: 12px!important;
+  color: #6f7a85!important;
+  opacity: 0.9!important;
+  text-decoration: none!important;
+}
+
+.login-clean form .forgot:hover, .login-clean form .forgot:active {
+  opacity: 1!important;
+  text-decoration: none!important;
+}

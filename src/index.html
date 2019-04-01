@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Voting Ethereum DApp | Vote Count</title>
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  </head>
+  <body style="background-repeat: no-repeat;background-size: cover;background-color: #f1f7fc;">
+    
+    <!-- Start: Navigation Clean -->
+    <div style="margin-bottom: 75px;">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color: #7f96c2;color: rgb(249,248,248);">
+            <div class="container"><a class="navbar-brand" href="#">School Name</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link" id="logout" style="color: rgb(254,254,254);">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End: Navigation Clean -->
+    <div class="container" id="content">
+        <div class="row" style="background-color: rgba(75,160,240,0);margin: 0px;margin-top: 48px;">
+            <div class="col offset-1 col-md-10 offset-1">
+                <h1>Election Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col offset-3 col-md-6 offset-3">
+                <div id="loader">
+                    <p class="text-center">Loading...</p>
+                </div>
+                <div class="card border rounded">
+                    <div class="table-responsive text-capitalize" style="padding: 0px 5%">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10%;">S.No.</th>
+                                    <th style="width: 45%;">Name</th>
+                                    <th style="width: 45%;">Vote Count</th>
+                                </tr>
+                            </thead>
+                            <tbody id="candidatesResults" >
+                            </tbody>
+                            <tfoot>
+                                    <tr class='text-truncate text-right'><td class='text-left' colspan='2'></td><td class='text-left'><strong id="totalVotes"></strong></td></tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            if(localStorage.getItem('loggedin') === null) {
+                window.location.replace("http://localhost:3000/login.html");
+            }            
+            $("#logout").click(function(){
+                localStorage.removeItem('loggedin');
+                window.location.replace("http://localhost:3000/login.html");
+            });
+        });
+    </script>
+  </body>
+</html>
